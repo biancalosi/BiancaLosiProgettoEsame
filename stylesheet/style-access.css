@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+* {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px
+}
+
+html {
+  height:100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-color: rgba(207, 207, 207, 0.5);
+}
+
+main {
+  padding: 10px;
+  top: 250%
+}
+
+                                                              /* The hero image e titolo*/
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("../images/bg-header-sito.jpg");
+  height: 200%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  background-position: center;
+  position: center;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding: 0px;
+}
+
+h1 {
+ color: white;
+ font-size: 40px;
+ font-weight: bold;
+ text-shadow: 8px 8px 8px #000000;
+}
+
+
+img, h1 {
+  vertical-align: middle;
+  display: inline;
+  cursor: pointer;
+  width: 20%;
+}
+                                      /* fine hero image e titolo*/
+
+                                             /* navbar */
+
+#navbar {
+  background-color: rgba(154, 0, 0, 1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+#navbar a:hover, .dropdown:hover, .dropbtn {
+  background-color: rgba(223, 223, 223, 1);
+  color: black;
+}
+
+#navbar a.active {
+  background-color: black;            
+  color: white;
+}
+
+#navbar input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 10px;
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  display: block;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  border: none;
+  display: block;
+  outline: none;
+  color: white;
+  background-color: inherit;
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: rgba(154, 0, 0, 0.8);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  z-index: 1;
+  padding-right: 3%;
+  text-align: left;
+}
+
+.dropdown-content ol > li {
+  list-style-type: none;
+}
+
+.dropdown-content a {
+  float: none;
+  width: 100%;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(223, 223, 223, 1);
+  width: 100%;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.show {
+  display: block;
+}
+
+                                        /* fine navbar */
+
+                                        /*breadcrumbs */
+.breadcrumbs {
+  padding-top: 3px;
+  list-style-type: none;
+  background-color: rgba(175, 175, 175, 0.8);
+  margin-top: 110px;
+  height: 50px;
+}
+
+.breadcrumbs li {
+  display: inline;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs li+li:before {
+  color: black;
+  content: "/\00a0";
+}
+
+.breadcrumbs li a {
+  text-decoration: underline;
+}
+
+.breadcrumbs li a:hover {
+  color: rgba(223, 223, 223, 1);
+  text-decoration: underline;
+}
+        
+                                                /*fine breadcrumbs*/
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 45px;
+}
+
+                                                      /*menu verticale*/
+#opere {
+  margin: 2%;
+}
+
+.vertical-menu {
+  width: 18%;
+  padding-right: 2%;
+  background-color: rgba(154, 0, 0, 1);
+  height: 100%;
+  float: left;
+}
+
+li {
+  list-style-type: none;
+  padding: 2%;
+}
+
+.vertical-menu a {
+  background-color: white;
+  color: black;
+  display: block;
+  padding: 12px;
+  width: 102%;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: rgba(175, 175, 175, 1)
+}
+
+.accordion {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 12px;
+  width: 98%;
+  border: none;
+  text-align: left;
+  outline: none;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 2%;
+}
+
+.accordion:after {
+  content: '\002B'; 
+  float: right;
+  color: black;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.accordion.active:after {
+  content: "\2212"; 
+}
+
+.accordion:hover {
+  background-color: rgba(223, 223, 223, 1); 
+}
+
+.panel {
+  padding: 0 18px;
+  width: 98%;
+  margin-left: 2%;
+  max-height: 0;
+  background-color: white;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.vertical-menu > li {
+  width: 10%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: rgba(175, 175, 175, 1);
+  color: white;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: rgba(223, 223, 223, 1);
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+                                               /* full page tab */
+.tab {
+  overflow: hidden;
+  background-color: rgba(223, 223, 223, 1);
+  width: 80%;
+  float: right;
+}
+
+.tablink {
+  background-color: lightgray;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: rgba(154, 0, 0, 1);
+}
+
+#manitele {
+  background-color: rgba(223, 223, 223, 1);
+  border: 4px solid rgba(154, 0, 0, 1);
+  margin-bottom: 50px;
+}
+
+.tabcontent {
+  height: 100%;
+  width: 80%;
+  float: right;
+}
+
+#defaultOpen {
+  background-color: rgba(154, 0, 0, 1);
+}
+                                                      /*opere */
+* {
+  box-sizing: border-box;
+}
+
+.column, .column2 {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 600px;
+  margin-top: 10px;
+  display: table-cell;
+}
+
+.column2 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.row {
+  margin: 0 -5px;
+  display: table; 
+  width: 100%; 
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  transition: 0.3s;
+  text-align: center;
+  background-color: #f1f1f1;
+  height: 600px;
+  padding: 2%;
+  margin: 2%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+.card p {
+  margin-top: 5px;
+}
+
+.card h3{
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.container {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.container a {
+  background-color: #555;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.container a:hover {
+  background-color: black;
+}
+
+.card1 {
+  background-image: url("../images/parata-amorosa.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  max-width: 100%;
+  height: 450px;
+  margin-top: 16%;
+}
+
+.card2 {
+  background-image: url("../images/nudo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  max-width: 100%;
+  height: 450px;
+  margin-top: 16%;
+}
+
+.card3 {
+  background-image: url("../images/machine-turn.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 450px;
+  max-width: 100;
+  margin-top: 16%;
+}
+
+.card4 {
+  background-image: url("../images/serata-dada.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 450px;
+  max-width: 100%;
+}
+
+.card5 {
+  background-image: url("../images/forza-comica.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  max-width: 100%;
+  height: 450px;
+  margin-top: 16%;
+}
+
+.card6 {
+  background-image: url("../images/janco.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  max-width: 100%;
+  height: 450px;
+}
+
+.card7 {
+  background-image: url("../images/dadacino.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  max-width: 100%;
+  height: 450px;
+  margin-top: 16%;
+}
+
+.card8 {
+  background-image: url("../images/baargeld.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  max-width: 100%;
+  height: 450px;
+}
+
+                                                          /* pagination */
+.pagination {
+  display: inline-block;
+  margin-top: 10%;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+.pagination a.active {
+  background-color: darkred;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: lightgray;
+}
+
+.center {
+  text-align: center;
+}
+                                                       /* fine pagination */
+
+.pre-footer, .post-footer {
+  color: white;
+  background-color: darkred;
+  text-align: center;
+  position: relative;
+  padding: 0px;
+}
+
+.pre-footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+.pre-footer a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+footer {
+  clear: both;
+}
+

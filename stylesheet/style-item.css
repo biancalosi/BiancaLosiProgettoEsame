@@ -1,0 +1,688 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+* {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height:100%;
+  margin: 0px;
+  background-color: rgba(207, 207, 207, 0.5);
+}
+
+main {
+  padding: 10px;
+  top: 250%;
+}
+
+                                                        /* The hero image */
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("../images/bg-header-sito.jpg");
+  height: 200%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  background-position: center;
+  position: center;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding: 0px;
+}
+
+h1 {
+ color: white;
+ font-size: 40px;
+ font-weight: bold;
+ text-shadow: 8px 8px 8px #000000;
+}
+
+.hero-text img, h1 {
+  vertical-align: middle;
+  display: inline;
+  cursor: pointer;
+  width: 20%;
+}
+                                              /*fine hero image e titolo*/
+                                                        /* navbar */
+#navbar {
+  background-color: rgba(154, 0, 0, 1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+#navbar a:hover, .dropdown:hover, .dropbtn {
+  background-color: rgba(223, 223, 223, 1);
+  color: black;
+}
+
+#navbar a.active {
+  background-color: black;
+  color: white;
+}
+
+#navbar input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 10px;
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  display: block;
+}
+
+.dropdown .dropbtn {
+  border: none;
+  display: block;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  margin-top: -20px;
+  margin-right: -35px;
+  margin-bottom: -20px;
+  margin-left: -10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: rgba(154, 0, 0, 0.8);
+  min-width: 160px;
+  text-align: center;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  z-index: 1;
+  padding-right: 3%;
+}
+
+.dropdown-content ol > li {
+  list-style-type: none;
+}
+
+.dropdown-content a {
+  float: none;
+  padding: 10%;
+  width: 100%;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(223, 223, 223, 1);
+  width: 100%;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.show {
+  display: block;
+}
+
+                                /* fine navbar*/
+                                /* breadcrumbs */
+
+.breadcrumbs {
+  padding: 3px 3px;
+  list-style-type: none;
+  background-color: rgba(175, 175, 175, 0.8);
+  margin-top: 110px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs li {
+  display: inline;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs li+li:before {
+  padding: 4px;
+  color: black;
+  content: "/\00a0";
+}
+
+.breadcrumbs li a {
+  text-decoration: underline;
+}
+
+.breadcrumbs li a:hover {
+  color: rgba(223, 223, 223, 1);
+  text-decoration: underline;
+}
+
+                                  /* fine breadcrumbs */
+                                   /*search menu*/
+.menulato {
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
+#mySearch {
+  width: 87%;
+  font-size: 18px;
+  margin-left: 43px;
+}
+
+#myMenu {
+  list-style-type: none;
+  height: 600px;
+  width: 100%;
+}
+
+#myMenu li a, .panel a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  text-align: center;
+}
+
+#myMenu li a:hover, .panel a:hover {
+  background-color: rgba(223, 223, 223, 1);
+  width: 100%;
+}
+
+.flex-container {
+ display: flex;
+ flex-direction: row;
+ background-color: lightgray;
+ width: 100%;
+ height: auto;
+}
+
+.left {
+  width: 25%;
+  height: 100%;
+  background-color: rgba(154, 0, 0, 1);
+  margin-top: 50px;
+}
+.right {
+  width: 75%;
+  height: 100%;
+}
+                          /* accordion */
+.accordion {
+  background-color: rgba(154, 0, 0, 1);
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion.active:after {
+  content: "\2212";
+}
+
+.active, .accordion:hover {
+  background-color: rgba(223, 223, 223, 1);
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+                                      /*fine search menu */
+                                      /*newsletter form*/
+.comment-box {
+  margin-top: 90px;
+  left: 50%;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  border-top: 4px solid rgba(223, 223, 223, 1);
+  border-bottom: 4px solid rgba(223, 223, 223, 1);
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.commenti {
+  background-color: rgba(154, 0, 0, 1);
+  height: 800px;
+  margin-top: 20px;
+  padding: 5px;
+}
+
+.comment-box input {
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+}
+
+.comment-box input:focus {
+  border: 1px solid black;
+  outline: 0;
+}
+
+.comment-box textarea {
+  width: 100%;
+  height: 300px;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  resize: none;
+  clear: both;
+}
+
+.comment-box textarea:focus {
+  border: 1px solid black;
+  outline: 0;
+}
+
+.comment-box button {
+  margin-left: 2%;
+  padding: 10px 30px;
+  background: white;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.comment-box button:hover {
+  background-color: rgba(175, 175, 175, 1);
+}
+                                      /*fine newsletter form */
+                                           /*commenti*/
+.comment-box {
+  margin-top: 90px;
+  left: 50%;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  border-top: 4px solid rgba(223, 223, 223, 1);
+  border-bottom: 4px solid rgba(223, 223, 223, 1);
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.commenti {
+  background-color: rgba(154, 0, 0, 1);
+  height: 800px;
+  margin-top: 20px;
+  padding: 5px;
+}
+
+.comment-box h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.comment-box input {
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+}
+
+.comment-box input:focus {
+  border: 1px solid black;
+  outline: 0;
+}
+
+.comment-box textarea {
+  width: 100%;
+  height: 300px;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  resize: none;
+  clear: both;
+}
+
+.comment-box textarea:focus {
+  border: 1px solid black;
+  outline: 0;
+}
+
+
+.comment-box button {
+  border: 0;
+  margin-left: 2%;
+  padding: 10px 30px;
+  background: white;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.comment-box button:hover {
+  background-color: rgba(223, 223, 223, 1);
+}
+                                       /* fine commenti*/
+                                        /* magnifier */
+* {
+  box-sizing: border-box;
+}
+
+.img-magnifier-container {
+  height: 100%; 
+  width: 50%;
+  position: relative;
+  float: left;
+  margin-top: 50px;
+  margin-bottom: 75px; 
+  margin-left: 20px;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 50%;
+  cursor: none;
+  width: 100px;
+  height: 100px;
+}
+                                          /*fine magnifier*/
+h2 {
+  text-align: center;
+  font-size: 35px;
+}
+
+.titolo-opera h3 {
+  text-align: center;
+  font-size: 25px;
+}
+
+.titolo-opera {
+  margin-top: 50px;
+  margin-right: 20%;
+}
+
+.descrizione-opera {
+  margin-top: 85px;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-right: 20%;
+}
+
+.desc {
+  width: 46%;
+  float: left;
+  margin-right: 20px;
+}
+                                          /*download*/
+.btn {
+  background-color: rgba(154, 0, 0, 1);
+  border: none;
+  color: white;
+  padding: 12px 10px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 0px;
+  width: 50%;
+  height: 75px;
+  margin-left: 17%;
+  text-align: center;
+  border-radius: 7px;
+}
+
+.btn:hover {
+  background-color: rgba(223, 223, 223, 1);
+  color: black;
+}
+                                  /* fine download */
+                                     /*social*/
+.social {
+  display: inline;
+  clear: both;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.social h4 {
+  display: inline;
+  margin-right: 30px;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 55px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+                                          /* fine social */
+                                        /* metadati*/
+
+.metadati h5 {
+  clear: both;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 50px
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 95%;
+  height: 600px;
+  border: 4px solid rgba(154, 0, 0, 1);
+  margin-left: 25px;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr {
+   border: 1px solid white;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(210, 210, 210, 1);
+} 
+tr:nth-child(odd) {
+  background-color: rgba(223, 223, 223, 1);
+}
+
+td a {
+  text-decoration: underline;
+  color: black;
+}
+
+.categorie {
+  float: left;
+  display: block;
+}
+
+.categorie > h5 {
+  font-size: 20px;
+  text-align: center;
+}
+
+h5 > p {
+  float: right;
+}
+
+                                        /* fine metadati*/
+                                     /* opere correlate */
+.collegamenti {
+  margin-bottom: 150px;
+}
+
+.col-33 {
+  width: 33%;
+  float: left;
+  height: 600px;
+  padding-left: 1%;
+}
+
+.collegamenti {
+  float: left;
+  width: 100%;
+  height: 600px;
+}
+
+.container {
+  background-color: black;
+  color: white;
+  text-decoration: underline;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: 2px solid rgba(223, 223, 223, 1);
+  cursor: pointer;
+  border-radius: 5px;
+  height: 45px;
+  width: 50%;
+  text-align: center;
+  float: left;
+  margin-top: 50%;
+  margin-left: 25%;
+  clear: both;
+}
+
+.container > a {
+  color: white;
+}
+
+.container:hover > a{
+  color: black;
+}
+
+.container:hover {
+  background-color: white;
+  border: 2px solid black;
+  text-decoration: underline;
+  color: black;
+}
+
+.collegamenti > h5 {
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.opera1, .opera2, .opera3, h6{
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(223, 223, 223, 0.7);
+}
+
+.opera1 {
+  background-image: url("../images/picabia1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.opera2 {
+  background-image: url("../images/picabia2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.opera3 {
+  background-image: url("../images/picabia3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+                                    /*footer */
+footer {
+   margin-top: 365px;
+   clear: both;
+}
+
+.pre-footer, .post-footer {
+  color: white;
+  background-color: darkred;
+  text-align: center;
+}
+
+.pre-footer a {
+  color: white;
+}
+
+.pre-footer a:hover {
+  color: black;
+}

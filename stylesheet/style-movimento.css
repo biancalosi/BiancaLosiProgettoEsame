@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+* {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px
+}
+
+html {
+  height:100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-color: rgba(207, 207, 207, 0.5);
+}
+
+main {
+  padding: 10px;
+  top: 250%
+}
+
+                                                              /* The hero image e titolo*/
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("../images/bg-header-sito.jpg");
+  height: 200%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  background-position: center;
+  position: center;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding: 0px;
+  position: center;
+}
+
+h1 {
+ color: white;
+ font-size: 40px;
+ display: inline;
+ font-weight: bold;
+ text-shadow: 8px 8px 8px #000000;
+}
+
+img, h1 {
+  vertical-align: middle;
+  display: inline;
+  cursor: pointer;
+  width: 20%;
+}
+
+                                        /* fine hero image e titolo*/
+
+                                              /* navbar */
+#navbar {
+  background-color: rgba(154, 0, 0, 1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+#navbar a:hover, .dropdown:hover, .dropbtn {
+  background-color: rgba(223, 223, 223, 1);
+  color: black;
+}
+
+#navbar a.active {
+  background-color: black;            
+  color: white;
+}
+
+#navbar input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 10px;
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  display: block;
+}
+
+.dropdown .dropbtn {
+  border: none;
+  display: block;
+  outline: none;
+  color: white;
+  background-color: inherit;
+}
+
+.dropbtn {
+  border: none;
+  display: block;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  clear: both;
+}
+
+.dropbtn:hover {
+  color: black;
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: rgba(154, 0, 0, 0.8);
+  min-width: 160px;
+  text-align: center;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  z-index: 1;
+  padding-right: 3%;
+}
+
+.dropdown-content ol li {
+  list-style-type: none;
+}
+
+.dropdown-content a {
+  float: none;
+  padding: 10%;
+  width: 100%;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(223, 223, 223, 1);
+  width: 100%;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.show {
+  display: block;
+}
+
+                                        /* fine navbar */
+
+                                         /* breadcrumbs */
+
+.breadcrumbs {
+  padding: 3px 3px;
+  list-style-type: none;
+  background-color: rgba(175, 175, 175, 0.8);
+  margin-top: 110px;
+  height: 50px;
+}
+
+.breadcrumbs li {
+  display: inline;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs li+li:before {
+  padding: 4px;
+  color: black;
+  content: "/\00a0";
+}
+
+.breadcrumbs li a {
+  text-decoration: underline;
+}
+
+.breadcrumbs li a:hover {
+  color: rgba(223, 223, 223, 1);
+  text-decoration: underline;
+}
+
+                                  /* fine breadcrumbs */
+                                  /*linea del tempo*/
+iframe {
+  margin-top: 20px;  
+  margin-left: 15px;
+  padding-right: 1%;
+  padding-left: 1%;
+  width: 98%;
+}
+
+                                /*primo box */
+#primobox {
+  margin-top: 10px;
+  display: flex;
+  margin-bottom: 10%;
+}
+
+.left > a, .artisti > a {
+  color: black;
+  text-decoration: underline;
+}
+
+.left > a:hover, .artisti > a:hover {
+  color: rgba(154, 0, 0, 1);
+  text-decoration: underline;
+}
+
+.left {  
+  background-color: rgba(223, 223, 223, 1);
+  height: 180%;
+  border: 4px solid rgba(154, 0, 0, 1);
+  border-radius: 5px;
+  width: 50%;
+  float: left;
+  text-align: justify;
+  text-justify: inter-word;
+  padding: 12px;
+  margin-left: 60px;
+}
+
+.left h2 {
+  text-align: center;
+  font-size: 22px;
+}
+                                        /* slideshow*/
+.right {  
+  width: 50%;
+  margin-right: 10px;
+  margin-left: 10%; 
+}
+
+* {
+  box-sizing:border-box
+}
+
+.slideshow-container {
+  max-width: 120%; 
+  height: 100px;
+  float: right;
+  padding-right: 25%;
+  margin-left: 20%;
+}
+
+.mySlides {
+  display: none;
+  height: 300px;
+  width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  top: 100%;
+  width: auto;
+  margin-top: -22px;
+  margin-right: -130px;
+  margin-left: -50px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  transition: 0.6s ease;
+  border-radius: 3 3px 3px 3;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  float: right;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(175, 175, 175, 1);
+}
+
+.text {
+  color: black;
+  padding: 8px 12px;
+  bottom: 8px;
+  width: 120%;
+  text-align: center;
+}
+
+.text a {
+  color: black;
+  text-decoration: underline;
+  padding: 8px 12px;
+  bottom: 8px;
+  width: 120%;
+  text-align: center;
+}
+
+.text a:hover {
+  color: rgba(154, 0, 0, 1);
+}
+
+.slide1 {
+  background-image: url("../images/picabia.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180%;
+  width: 120%;
+}
+
+.slide2 {
+  background-image: url("../images/manray.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180%;
+  width: 120%;
+}
+
+.slide3 {
+  background-image: url("../images/hansarp.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180%;
+  width: 120%;
+}
+
+.slide4 {
+  background-image: url("../images/hausmann.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180%;
+  width: 120%;
+}
+
+.slide5 {
+  background-image: url("../images/tzara.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180%;
+  width: 120%;
+}
+
+.slide6 {
+  background-image: url("../images/hoch.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180%;
+  width: 120%;
+}
+
+.slide7 {
+  background-image: url("../images/duchamp.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180%;
+  width: 120%;
+}
+
+.slide8 {
+  background-image: url("../images/ball.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180%;
+  width: 120%;
+}
+
+                                            /*secondo box*/
+#secondobox {
+  height: 350px;
+  margin-top: 15%;
+}
+
+.primagm h3 {
+  font-size: 35px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.primagm {
+  background-image: url("../images/terzo-box.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  max-width: 1000px; 
+  height: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+#bottone2 p {
+  text-align: center;
+  background-color: white;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid black;
+  width: 70%;
+  margin-top: 220px;
+  margin-left: 15%;
+  height: 30%;
+}
+
+#bottone2 p a {
+  color: black;
+}
+
+#bottone2 p:hover {
+  background-color: rgba(175, 175, 175, 1);
+}
+                                            /*fine secondo box*/
+
+footer {
+  margin-top: 100px;
+}
+
+.pre-footer, .post-footer {
+  color: white;
+  background-color: darkred;
+  text-align: center;
+}
+
+.pre-footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+.pre-footer a:hover {
+  color: black;
+  text-decoration: underline;
+}

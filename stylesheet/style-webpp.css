@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+* {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height:100%;
+  margin: 0px;
+  background-color: rgba(164, 164, 164, 0.36);
+}
+
+main {
+  padding: 10px;
+  top: 250%;
+}
+
+                                          /* The hero image e titolo */
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("../images/bg-header-sito.jpg");
+  height: 200%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text {
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  background-position: center;
+  position: center;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding: 0px;
+  position: center;
+}
+
+h1 {
+ color: white;
+ font-size: 40px;
+}
+
+.hero-text img, h1 {
+  float: none;
+  vertical-align: middle;
+  display: inline;
+  cursor: pointer;
+  width: 20%;
+}
+                                               /* fine hero image e titolo*/
+                                                    /* navbar */
+
+#navbar {
+  background-color: rgba(154, 0, 0, 1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+#navbar a:hover, .dropdown:hover, .dropbtn {
+  background-color: rgba(223, 223, 223, 1);
+  color: black;
+}
+
+#navbar input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 10px;
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  display: block;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  border: none;
+  display: block;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.dropbtn {
+  margin-top: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: rgba(154, 0, 0, 0.8);
+  min-width: 160px;
+  text-align: center;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  z-index: 1;
+  padding-right: 3%;
+}
+
+.dropdown-content ol > li {
+  list-style-type: none;
+}
+
+.dropdown-content a {
+  float: none;
+  padding: 10%;
+  width: 100%;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(223, 223, 223, 1);
+  width: 100%;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.show {
+  display: block;
+}
+                                        /* fine navbar */
+                                        /*breadcrumbs */
+.breadcrumbs {
+  padding-top: 3px;
+  list-style-type: none;
+  background-color: rgba(175, 175, 175, 0.8);
+  margin-top: 110px;
+  height: 50px;
+}
+
+.breadcrumbs li {
+  display: inline;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs li+li:before {
+  color: black;
+  content: "/\00a0";
+}
+
+.breadcrumbs li a {
+  text-decoration: underline;
+}
+
+.breadcrumbs li a:hover {
+  color: rgba(223, 223, 223, 1);
+  text-decoration: underline;
+}
+        
+                                                /*fine breadcrumbs*/
+.indice h2 {
+  text-align: left;
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 24px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 5%;
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.home, .accesso1, .accesso2, .item {
+  margin-bottom: 610px;
+}
+
+.chi-siamo {
+  margin-bottom: 470px;
+}
+
+img {
+  float: right;
+  margin-left: 20px;
+}
+
+.indice {
+  margin-top: 2%;
+  text-decoration: none;
+}
+.indice a {
+  text-decoration: none;
+  color: black;
+}
+
+footer {
+  margin-top: 0px;
+}
+
+.pre-footer, .post-footer {
+  color: white;
+  background-color: darkred;
+  text-align: center;
+}
+
+.pre-footer a {
+  color: white;
+}
+
+.pre-footer a:hover {
+  color: black;
+}
